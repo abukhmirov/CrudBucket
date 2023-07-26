@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CrudBucketMVC.Models.GameCompany>
+
+<h1>Company Browser</h1>
+
+@if (Model != null)
+{
+    <h3>All Companies</h3>
+    <ul>
+        @foreach (var company in Model)
+        {
+            <li>
+                <strong>Name:</strong> @company.Name <br /> <strong>Location:</strong> @company.Location
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No companies found.</p>
+}
